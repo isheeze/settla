@@ -4,22 +4,22 @@ import WorldMap from "./ui/WorldMap";
 
 const RemoteConnectivity: React.FC = () => {
     return (
-        <section className="py-32 bg-slate-50 w-full font-sans overflow-hidden">
+        <section className="py-20 bg-slate-50 w-full font-sans overflow-hidden">
             <div className="max-w-7xl mx-auto px-6 text-center">
 
                 {/* Branding: Consistent Indigo Header */}
-                <h2 className="text-4xl md:text-7xl font-[900] mb-8 text-indigo-950 tracking-tight leading-[1.1]">
+                <h2 className="text-3xl md:text-5xl font-[900] mb-6 text-indigo-950 tracking-tight leading-[1.1]">
                     Connected <span className="text-indigo-600">Everywhere.</span>
                 </h2>
 
-                <p className="text-lg md:text-xl text-indigo-900/60 max-w-2xl mx-auto mb-20 leading-relaxed">
+                <p className="text-base md:text-lg text-indigo-900/60 max-w-xl mx-auto mb-16 leading-relaxed">
                     Financial boundaries are a thing of the past. Move your assets with zero friction across <span className="text-indigo-600 font-bold">170+ territories.</span>
                 </p>
 
-                <div className="w-full max-w-6xl mx-auto relative group">
+                <div className="w-full max-w-5xl mx-auto relative group">
                     {/* Soft background glow */}
                     <div className="absolute inset-0 bg-indigo-500/5 blur-[120px] rounded-full -z-10 transition-opacity duration-1000"></div>
-                    
+
                     <WorldMap
                         lineColor="#6366f1"
                         dots={[
@@ -52,22 +52,22 @@ const RemoteConnectivity: React.FC = () => {
                 </div>
 
                 {/* Performance Stats */}
-                <div className="mt-24 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 text-indigo-950 max-w-5xl mx-auto">
+                <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 text-indigo-950 max-w-4xl mx-auto">
                     <div className="flex flex-col items-center">
-                        <p className="text-5xl font-black mb-2 text-indigo-600">170+</p>
-                        <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-900/40">Regions</p>
+                        <p className="text-4xl font-black mb-1 text-indigo-600">170+</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-900/40">Regions</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <p className="text-5xl font-black mb-2 text-indigo-950">50+</p>
-                        <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-900/40">Currencies</p>
+                        <p className="text-4xl font-black mb-1 text-indigo-950">50+</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-900/40">Currencies</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <p className="text-5xl font-black mb-2 text-indigo-950">24/7</p>
-                        <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-900/40">Reliability</p>
+                        <p className="text-4xl font-black mb-1 text-indigo-950">24/7</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-900/40">Reliability</p>
                     </div>
                     <div className="flex flex-col items-center">
-                        <p className="text-5xl font-black mb-2 text-indigo-600">0ms</p>
-                        <p className="text-xs font-black uppercase tracking-[0.2em] text-indigo-900/40">Settlement</p>
+                        <p className="text-4xl font-black mb-1 text-indigo-600">0ms</p>
+                        <p className="text-[10px] font-black uppercase tracking-[0.2em] text-indigo-900/40">Settlement</p>
                     </div>
                 </div>
             </div>

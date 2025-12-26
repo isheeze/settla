@@ -4,11 +4,11 @@ import { SettlaLogo } from './Logo';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-indigo-950 text-white pt-24 pb-12 font-sans overflow-hidden">
+    <footer className="bg-indigo-950 text-white pt-16 pb-8 font-sans overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        
+
         {/* Main Links Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-12 mb-24">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-8 gap-8 lg:gap-12 mb-16">
           <div className="lg:col-span-1">
             <h5 className="font-bold text-white mb-6 text-sm uppercase tracking-wider">Crypto</h5>
             <ul className="space-y-3 text-indigo-200/80 text-sm font-medium">

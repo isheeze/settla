@@ -34,10 +34,10 @@ const UPCOMING_FEATURES = [
 
 const FutureRoadmap: React.FC = () => {
   return (
-    <section className="py-40 bg-white relative overflow-hidden font-sans">
+    <section className="py-24 bg-white relative overflow-hidden font-sans">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-12 lg:gap-32">
-          
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-24">
+
           {/* Left Side: Content Block (following wireframe) */}
           <div className="lg:w-1/2">
             <motion.div
@@ -46,24 +46,24 @@ const FutureRoadmap: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8 }}
             >
-              <h2 className="text-5xl md:text-8xl font-black text-indigo-950 tracking-tighter leading-[0.9] mb-8">
+              <h2 className="text-4xl md:text-6xl font-black text-indigo-950 tracking-tighter leading-[0.9] mb-6">
                 The Future <br /> <span className="text-indigo-600">Protocol.</span>
               </h2>
-              
-              <h3 className="text-xl md:text-2xl font-bold text-indigo-900/40 uppercase tracking-[0.3em] mb-10">
+
+              <h3 className="text-lg md:text-xl font-bold text-indigo-900/40 uppercase tracking-[0.3em] mb-8">
                 Roadmap Phase v2.5
               </h3>
 
               <div className="space-y-6">
-                <p className="text-xl text-indigo-900/60 leading-relaxed font-medium">
+                <p className="text-lg text-indigo-900/60 leading-relaxed font-medium">
                   We aren't just building a bank; we're building a global financial operating system. Our engineers are currently synthesizing new modules to eliminate the remaining friction in global liquidity.
                 </p>
-                <p className="text-xl text-indigo-900/60 leading-relaxed font-medium">
+                <p className="text-lg text-indigo-900/60 leading-relaxed font-medium">
                   From deep-learning asset management to high-end hardware interfaces, the next 12 months will redefine what it means to hold wealth in the digital age.
                 </p>
               </div>
 
-              <div className="mt-12 flex items-center gap-6">
+              <div className="mt-10 flex items-center gap-6">
                 <div className="flex -space-x-3">
                   {[1, 2, 3, 4].map(i => (
                     <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-indigo-100 overflow-hidden">
@@ -88,16 +88,16 @@ const FutureRoadmap: React.FC = () => {
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.2, duration: 0.6 }}
                 whileHover={{ x: -10 }}
-                className="group flex items-center gap-8 bg-slate-50 border border-indigo-50 p-8 rounded-[2.5rem] hover:bg-white hover:shadow-[0_32px_64px_-16px_rgba(49,46,129,0.08)] hover:border-indigo-100 transition-all cursor-default"
+                className="group flex items-center gap-6 bg-slate-50 border border-indigo-50 p-6 rounded-[2rem] hover:bg-white hover:shadow-[0_32px_64px_-16px_rgba(49,46,129,0.08)] hover:border-indigo-100 transition-all cursor-default"
               >
                 {/* Icon Box */}
-                <div className="flex-shrink-0 w-16 h-16 bg-white rounded-2xl flex items-center justify-center text-indigo-600 shadow-sm border border-indigo-50 group-hover:bg-indigo-600 group-hover:text-white transition-all">
+                <div className="flex-shrink-0 w-14 h-14 bg-white rounded-2xl flex items-center justify-center text-indigo-600 shadow-sm border border-indigo-50 group-hover:bg-indigo-600 group-hover:text-white transition-all">
                   {feature.icon}
                 </div>
 
                 {/* Text Content */}
                 <div>
-                  <h4 className="text-xl font-black text-indigo-950 mb-2 group-hover:text-indigo-600 transition-colors">
+                  <h4 className="text-lg font-black text-indigo-950 mb-1 group-hover:text-indigo-600 transition-colors">
                     {feature.title}
                   </h4>
                   <p className="text-sm text-indigo-900/50 font-medium leading-relaxed">
@@ -108,14 +108,14 @@ const FutureRoadmap: React.FC = () => {
             ))}
 
             {/* Visual bottom accent */}
-            <div className="mt-4 p-6 border-2 border-dashed border-indigo-100 rounded-[2.5rem] flex items-center justify-center">
+            <div className="mt-4 p-5 border-2 border-dashed border-indigo-100 rounded-[2rem] flex items-center justify-center">
               <span className="text-[10px] font-black uppercase tracking-[0.4em] text-indigo-200">System Expansion Underway</span>
             </div>
           </div>
 
         </div>
       </div>
-      
+
       {/* Decorative side accent */}
       <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1 h-64 bg-gradient-to-b from-transparent via-indigo-100 to-transparent opacity-50"></div>
     </section>

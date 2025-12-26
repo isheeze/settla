@@ -27,14 +27,14 @@ const FAQ_DATA = [
 
 const FAQItem = ({ item, isOpen, onClick, index }: { item: typeof FAQ_DATA[0], isOpen: boolean, onClick: () => void, index: number }) => {
   return (
-    <motion.div 
+    <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: index * 0.1 }}
       className={`group border-b border-indigo-100/50 last:border-0 transition-all ${isOpen ? 'bg-indigo-50/30' : 'hover:bg-indigo-50/10'}`}
     >
-      <button 
+      <button
         onClick={onClick}
         className="w-full py-8 px-6 flex items-center justify-between text-left transition-all"
       >
@@ -49,7 +49,7 @@ const FAQItem = ({ item, isOpen, onClick, index }: { item: typeof FAQ_DATA[0], i
           <div className={`absolute w-0.5 h-3 bg-current transition-all ${isOpen ? 'opacity-0 text-white' : 'opacity-100 text-indigo-300'}`}></div>
         </div>
       </button>
-      
+
       <AnimatePresence>
         {isOpen && (
           <motion.div
@@ -79,15 +79,15 @@ const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(0);
 
   return (
-    <section className="py-40 bg-white relative overflow-hidden font-sans">
+    <section className="py-24 bg-white relative overflow-hidden font-sans">
       {/* Decorative background grid */}
       <div className="absolute inset-0 bg-[radial-gradient(#e0e7ff_1px,transparent_1px)] [background-size:40px_40px] opacity-30"></div>
-      
+
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="flex flex-col lg:flex-row gap-20">
-          
+        <div className="flex flex-col lg:flex-row gap-16 lg:gap-20">
+
           {/* Left: Sticky Branding */}
-          <div className="lg:w-1/3 lg:sticky lg:top-40 h-fit">
+          <div className="lg:w-1/3 lg:sticky lg:top-32 h-fit">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -97,13 +97,13 @@ const FAQ = () => {
                 <div className="w-2 h-2 rounded-full bg-indigo-600 animate-pulse"></div>
                 <span className="text-indigo-600 font-black text-[10px] uppercase tracking-widest">Support Core</span>
               </div>
-              <h2 className="text-5xl md:text-7xl font-black text-indigo-950 tracking-tighter leading-[0.9] mb-8">
+              <h2 className="text-4xl md:text-5xl font-black text-indigo-950 tracking-tighter leading-[0.9] mb-6">
                 Common <br /> <span className="text-indigo-600">Queries.</span>
               </h2>
-              <p className="text-lg text-indigo-900/50 font-medium mb-10 leading-relaxed">
+              <p className="text-lg text-indigo-900/50 font-medium mb-8 leading-relaxed">
                 Everything you need to know about the Settla protocol and global liquidity movements.
               </p>
-              <button className="flex items-center gap-4 text-indigo-600 font-black text-sm uppercase tracking-widest group">
+              <button className="flex items-center gap-4 text-indigo-600 font-black text-xs uppercase tracking-widest group">
                 Visit Help Center
                 <div className="w-8 h-8 rounded-full border border-indigo-100 flex items-center justify-center group-hover:bg-indigo-600 group-hover:text-white transition-all">
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,34 +116,34 @@ const FAQ = () => {
 
           {/* Right: The Accordion */}
           <div className="lg:w-2/3">
-            <div className="bg-white/50 backdrop-blur-sm rounded-[3rem] border border-indigo-50 overflow-hidden shadow-[0_32px_64px_-16px_rgba(49,46,129,0.05)]">
+            <div className="bg-white/50 backdrop-blur-sm rounded-[2.5rem] border border-indigo-50 overflow-hidden shadow-[0_32px_64px_-16px_rgba(49,46,129,0.05)]">
               {FAQ_DATA.map((item, idx) => (
-                <FAQItem 
-                  key={idx} 
-                  item={item} 
+                <FAQItem
+                  key={idx}
+                  item={item}
                   index={idx}
                   isOpen={activeIndex === idx}
                   onClick={() => setActiveIndex(activeIndex === idx ? null : idx)}
                 />
               ))}
             </div>
-            
+
             {/* Bottom contact card */}
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.5 }}
-              className="mt-12 p-8 bg-indigo-950 rounded-[2.5rem] flex flex-col md:flex-row items-center justify-between gap-8"
+              className="mt-10 p-6 bg-indigo-950 rounded-[2rem] flex flex-col md:flex-row items-center justify-between gap-6"
             >
-              <div className="flex items-center gap-6">
-                <div className="w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center text-3xl">💬</div>
+              <div className="flex items-center gap-5">
+                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center text-2xl">💬</div>
                 <div>
-                  <h5 className="text-white font-bold text-xl">Still have questions?</h5>
-                  <p className="text-indigo-300/60 font-medium">Our engineers are online 24/7 to assist you.</p>
+                  <h5 className="text-white font-bold text-lg">Still have questions?</h5>
+                  <p className="text-indigo-300/60 font-medium text-sm">Our engineers are online 24/7 to assist you.</p>
                 </div>
               </div>
-              <button className="bg-indigo-600 text-white px-8 py-4 rounded-full font-black hover:bg-indigo-500 transition-all whitespace-nowrap">
+              <button className="bg-indigo-600 text-white px-6 py-3 rounded-full font-black text-sm hover:bg-indigo-500 transition-all whitespace-nowrap">
                 Open Support Ticket
               </button>
             </motion.div>
