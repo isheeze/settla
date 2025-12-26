@@ -185,18 +185,6 @@ const CurrencyConverter: React.FC = () => {
               transition={{ duration: 0.8, type: "spring", damping: 20 }}
               className="bg-white p-6 md:p-8 rounded-[2.5rem] shadow-[0_64px_128px_-32px_rgba(49,46,129,0.2)] border border-indigo-100 relative group"
             >
-              {/* Scanline animation when loading */}
-              <AnimatePresence>
-                {loading && (
-                  <motion.div
-                    initial={{ top: '0%' }}
-                    animate={{ top: '100%' }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
-                    className="absolute left-0 right-0 h-1 bg-gradient-to-r from-transparent via-indigo-400 to-transparent z-20 pointer-events-none blur-sm"
-                  />
-                )}
-              </AnimatePresence>
 
               <div className="space-y-6">
                 {/* Amount Input */}

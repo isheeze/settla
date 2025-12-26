@@ -112,7 +112,7 @@ const PROTOCOLS = [
   }
 ];
 
-const Module = ({ protocol, index, total }: { protocol: typeof PROTOCOLS[0], index: number, total: number }) => {
+const Module: React.FC<{ protocol: typeof PROTOCOLS[number]; index: number; total: number }> = ({ protocol, index, total }) => {
   const isEven = index % 2 === 0;
 
   return (

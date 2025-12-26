@@ -4,7 +4,7 @@ import { motion } from 'motion/react';
 
 const VideoSection: React.FC = () => {
   return (
-    <section className="relative h-screen w-full overflow-hidden flex items-center justify-center font-sans">
+    <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center font-sans py-24">
       {/* Background Video Container */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-indigo-950/70 z-10 backdrop-blur-[1px]"></div>
@@ -34,7 +34,7 @@ const VideoSection: React.FC = () => {
             <span className="text-[10px] font-black uppercase tracking-[0.3em]">Live Protocol Stream</span>
           </div>
 
-          <h2 className="text-5xl md:text-7xl font-black mb-6 tracking-tighter leading-[0.9]">
+          <h2 className="text-4xl sm:text-5xl md:text-7xl font-black mb-6 tracking-tighter leading-[0.9]">
             The rhythm of <br />
             <span className="text-indigo-400">global liquidity.</span>
           </h2>
@@ -54,7 +54,7 @@ const VideoSection: React.FC = () => {
         </motion.div>
 
         {/* Floating Stats */}
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+        <div className="mt-10 md:mt-16 grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {[
             { label: 'Network Uptime', value: '99.999%', sub: 'SLA Guaranteed' },
             { label: 'Peak Capacity', value: '450k+', sub: 'TX / Second' },
